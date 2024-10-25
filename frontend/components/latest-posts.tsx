@@ -34,6 +34,7 @@ function LatestPosts() {
   const latestBlogPosts = posts.map((post) => {
     return (
         <PostItem 
+                key={post.id}
                 id={post.id} 
                 date={post.date} 
                 title={post.title} 
