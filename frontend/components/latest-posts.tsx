@@ -1,43 +1,27 @@
 import Container from "./container";
 import PostItem from './post-item';
 
-const posts = [
-    {
-        id: 'sdfsdfersd',
-        date: "Feb 02, 2023",
-        title: "Deploying Django App with Domain Authentication",
-    },
-    {
-        id: 'fsoajirwnwns;',
-        date: "Mar 13, 2023",
-        title: "Filtering Sets in a python list",
-    },
-    {
-        id: 'asdjklafjepeamv',
-        date: "Apr 29, 2023",
-        title: "CICD with Github Actions",
-    },
-    {
-        id: 'fsdfsrrrrrlss',
-        date: "Jun 30, 2023",
-        title: "The difference between git rebase and git merge",
-    },
-    {
-        id: 'afgeiervmds',
-        date: "Jul 19, 2023",
-        title: "Tailwind is a game changer",
-    },
-]
+type Post = {
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+}
 
-function LatestPosts() {
+type LatestPostsProps = {
+  posts: Post[];
+}
 
-  const latestBlogPosts = posts.map((post) => {
+
+function LatestPosts({posts}: LatestPostsProps) {
+
+  const latestBlogPosts = posts.map((post: any) => {
     return (
         <PostItem 
                 key={post.id}
-                id={post.id} 
                 date={post.date} 
                 title={post.title} 
+                slug={post.slug}
         />
     )
   })
