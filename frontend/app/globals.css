@@ -6,6 +6,7 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgba: 25, 60, 86, 1;
   --background-end-rgba: 0, 0, 0, 0.93;
+  --theme-color: #f4f4f4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,10 +14,12 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgba: 255, 255, 255, 1;
     --background-end-rgba: 255, 255, 255, 1;
+    --theme-color: #0a1c29;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+  background-color: var(--theme-color);
   box-sizing: border-box;
 }
