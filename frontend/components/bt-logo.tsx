@@ -4,7 +4,7 @@ import logoDark from "@/assets/bt-dark.svg";
 import logoLight from "@/assets/bt-light.svg";
 
 
-function Logo() {
+function BTLogo() {
     return ( 
         <Link href={'/'}>
             <Image className="w-16 hidden dark:block" src={logoDark} alt={'logo'}/>            
@@ -13,4 +13,4 @@ function Logo() {
      );
 }
 
-export default Logo;
+export default BTLogo;

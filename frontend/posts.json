@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "slug": "introduction-to-cloud-computing",
+        "title": "Introduction to Cloud Computing",
+        "date": "2024-10-01",
+        "content": "Cloud computing is the delivery of computing services over the internet..."
+    },
+    {
+        "id": 2,
+        "slug": "benefits-of-data-lakes",
+        "title": "Benefits of Data Lakes",
+        "date": "2024-10-10",
+        "content": "Data lakes allow organizations to store large volumes of raw data for future analysis..."
+    },
+    {
+        "id": 3,
+        "slug": "getting-started-with-hdfs",
+        "title": "Getting Started with HDFS",
+        "date": "2024-10-15",
+        "content": "Hadoop Distributed File System (HDFS) is designed to store large data sets reliably..."
+    },
+    {
+        "id": 4,
+        "slug": "what-is-mapreduce",
+        "title": "What is MapReduce?",
+        "date": "2024-10-18",
+        "content": "MapReduce is a programming model for processing large data sets with a distributed algorithm..."
+    },
+    {
+        "id": 5,
+        "slug": "spark-vs-mapreduce",
+        "title": "Spark vs. MapReduce: A Comparison",
+        "date": "2024-10-22",
+        "content": "Apache Spark and MapReduce are both popular tools for big data processing, but they differ in speed and efficiency..."
+    }
+]

@@ -1,5 +1,5 @@
 // importing and assigning blogs data
-import blogsData from '@/blogs.json';
+import blogsData from '@/posts.json';
 
 // duplicate
 type Post = {
