@@ -1,6 +1,7 @@
 import './globals.css';
 import { Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
+import {Providers} from "./theme-provider";
 
 // ui components
 import Header from '@/ui/header';
@@ -11,6 +12,7 @@ import BigGithubIcon from '@/components/big-github-icon';
 import BTLogo from '@/components/bt-logo';
 import RightsReserved from '@/components/rights-reserved';
 import PoweredBy from '@/components/powered-by';
+import ThemeToggle from '@/components/theme-toggle';
 
 
 
@@ -29,13 +31,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={montserrat.className}>
-        
-        <Header colorScheme={colorScheme}>
+
+        <Providers>
+            <Header colorScheme={colorScheme}>
+              <BTLogo/>
+              <BigGithubIcon />
+              <ThemeToggle/>
+            </Header>
+          </Providers>
+
+            {children}
+
+          
+      
+        {/* <Header colorScheme={colorScheme}>
             <BTLogo/>
             <BigGithubIcon />
-        </Header>
+            <ThemeToggle/>
+        </Header> */}
 
         {/* {children} */}
 
