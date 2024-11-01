@@ -34,13 +34,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={montserrat.className}>
 
-        <Providers>
+        
             <Header colorScheme={colorScheme}>
               <BTLogo/>
               <BigGithubIcon />
+              <Providers>
               <ThemeToggle/>
+              </Providers>
             </Header>
-          </Providers>
+          
 
             {children}
 
@@ -54,10 +56,10 @@ export default function RootLayout({
 
         {/* {children} */}
 
-        {/* <Footer>
+        <Footer>
           <RightsReserved/>
           <PoweredBy/>
-        </Footer> */}
+        </Footer>
 
       </body>
     </html>
