@@ -11,8 +11,7 @@ import BigGithubIcon from '@/components/big-github-icon';
 import BTLogo from '@/components/bt-logo';
 import RightsReserved from '@/components/rights-reserved';
 import PoweredBy from '@/components/powered-by';
-import FlexBox from '@/ui/flexbox';
-import Container from '@/ui/container';
+
 
 
 const montserrat = Montserrat({ subsets: ['latin'] })
@@ -34,15 +33,11 @@ export default function RootLayout({
       <body className={montserrat.className}>
         
         <Header colorScheme={colorScheme}>
-          <Container>
-            <FlexBox twstyle="flex justify-between items-center p-8 lg:px-16"> 
-              <BTLogo/>
-              <BigGithubIcon />
-            </FlexBox>
-          </Container>
+            <BTLogo/>
+            <BigGithubIcon />
         </Header>
 
-        {children}
+        {/* {children} */}
 
         {/* <Footer>
           <RightsReserved/>
