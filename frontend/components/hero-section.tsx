@@ -10,14 +10,13 @@ function HeroSection() {
             className="bg-[#f4f4f4] dark:bg-dark"
             >
             <Container>
-                <FlexBox 
-                    twstyle="flex flex-col lg:flex-row items-center gap-16 p-12 xl:pr-16  lg:px-8 lg:py-16  xl:gap-16 "
+                <div 
+                    className="flex flex-col items-center gap-16 px-4 lg:flex-row  xl:pr-16  lg:px-8 lg:py-16  xl:gap-16 "
                 >
                     <Avatar/>       
                     <Bio/>
                     <HandlesAndResume/>  
-                </FlexBox>  
-                
+                </div>
             </Container>
         </main>
     );
