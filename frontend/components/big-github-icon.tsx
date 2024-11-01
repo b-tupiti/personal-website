@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 function BigGithubIcon() {
   return (
-    <Link href={'https://github.com/b-tupiti'}>
+    <Link href={'https://github.com/b-tupiti'} className='ml-auto mr-4'>
       <Image 
         src={githubImg} 
         alt={''} className='text-white' 
-        width={70}
+        width={40}
       />
     </Link>
   );
