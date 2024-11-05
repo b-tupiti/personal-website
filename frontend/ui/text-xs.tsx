@@ -1,6 +1,6 @@
 function TextXS(props: any) {
     return ( 
-        <small className="dark:text-slate-400 text-slate-700">
+        <small className="dark:text-slate-500 text-slate-500 text-xs">
             {props.children}
         </small> 
      );

@@ -7,7 +7,7 @@ function Avatar() {
             className="object-fit rounded-full"
             src={avatarImg} 
             alt={'my-avatar'}
-            width={150}
+            width={180}
         />
     );
 }
