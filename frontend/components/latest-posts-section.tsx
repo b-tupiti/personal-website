@@ -1,17 +1,15 @@
-import Container from "@/ui/container";
-
 import PostItem from '@/components/post-item';
 
 // importing posts
 import data from '../posts.json';
-import FlexBox from "@/ui/flexbox";
 import Title from "@/ui/title";
+import Container from '@/ui/container';
 
 type Post = {
   id: number;
   slug: string;
   title: string;
-  date: string;
+  readTime: string;
 }
 const postsList: Post[] = data;
 
@@ -19,7 +17,7 @@ const postItems = postsList.map((post: any) => {
   return (
       <PostItem 
               key={post.id}
-              date={post.date} 
+              readTime={post.readTime} 
               title={post.title} 
               slug={post.slug}
       />
@@ -29,21 +27,23 @@ const postItems = postsList.map((post: any) => {
 function LatestPostsSection() {
   
     return (
-      <section className='dark:bg-[#0c2333] bg-[#f4f4f4] py-6'>
-        <Container>
-
+      <section className='dark:bg-dark  px-6 py-16'>
+        
+        <div className="max-w-[720px] m-auto">
           <Title>
-            Latest posts
-          </Title> 
-          
-          <FlexBox 
-            twstyle='flex flex-col gap-0.5 items-center m-auto py-6 p-2 
-              lg:max-w-[60rem]'
-          >
-           {postItems}
-          </FlexBox>
+              Latest posts
+            </Title> 
+            
+            <div className="flex flex-col items-center mt-8">
+              {postItems}
+            </div>
+        </div>
 
-        </Container>
+          
+
+        
+
+        
       </section>
     );
 }

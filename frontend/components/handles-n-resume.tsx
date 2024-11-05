@@ -22,14 +22,14 @@ const links = [
 function HandlesAndResume() {
     return (
         <FlexBox 
-          twstyle="flex justify-center gap-4 xl:ml-auto"
+          twstyle="flex mt-2 lg:mt-0 gap-4 xl:ml-auto xl:mr-8"
           >
             {
                   links.map(link => (
                         <Link 
                             key={link.id}
                             href={link.href}  
-                            className="capitalize dark:text-white text-dark hover:text-slate-100"
+                            className="capitalize dark:text-slate-400 text-dark text-sm "
                         >
                             {link.label}
                         </Link>

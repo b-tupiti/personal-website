@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import nookIcon from '@/assets/icons/nook-icon.svg';
+import { ArrowLongRightIcon } from '@/icons/icons';
 
 type PostItemProps = {
-    date: string,
+    readTime: string,
     title: string,
     slug: string,
 }
@@ -12,27 +13,25 @@ function PostItem(post: PostItemProps){
     return (
 
         <Link 
-            className='text-slate-200 text-sm relative w-full px-6 py-6 bg-slate-200 grid rounded-md gap-4 justify-between items-center 
-                        lg:static lg:py-8 lg:grid-cols-6
-                        dark:bg-[#0e283a] dark:hover:bg-[#0f2a3d]' 
+            className='text-slate-200 text-sm relative w-full bg-[#fffefe] flex flex-col gap-2 py-4 justify-start 
+                         border-b border-b-slate-300 dark:border-b-slate-600 
+                        dark:bg-dark' 
             href={post.slug}
             >
             <span 
-                className='dark:text-slate-300 grid-cols-1 text-slate-600'
-                >
-                {post.date}
-            </span>
-            <span 
-                className='font-semibold lg:text-lg lg:col-span-4 text-slate-800 dark:text-white'
+                className='font-semibold lg:text-md lg:col-span-4 text-slate-800 dark:text-white'
                 >
                 {post.title}
             </span>
-            <Image 
-                className='absolute top-0 right-0 lg:static lg:ml-auto' 
-                src={nookIcon} 
-                alt={'nook icon'} 
-                width={20} 
-            />
+            <span 
+                className='dark:text-slate-300 grid-cols-1 text-slate-600'
+                >
+                {post.readTime}
+            </span>
+          
+            <ArrowLongRightIcon 
+                className="absolute right-0 top-1/2 -translate-y-1/2  size-6"
+                />
         </Link>
 
     )

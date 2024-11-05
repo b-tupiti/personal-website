@@ -13,6 +13,7 @@ import BTLogo from '@/components/bt-logo';
 import RightsReserved from '@/components/rights-reserved';
 import PoweredBy from '@/components/powered-by';
 import ThemeToggle from '@/components/theme-toggle';
+import HandlesAndResume from '@/components/handles-n-resume';
 
 
 
@@ -23,7 +24,6 @@ export const metadata: Metadata = {
   description: 'Hi Brandon, a fullstack web developer skilled in django and nextjs.',
 }
 
-const colorScheme = "bg-[#f4f4f4] dark:bg-dark";
 
 export default function RootLayout({
   children,
@@ -35,26 +35,16 @@ export default function RootLayout({
       <body className={montserrat.className}>
 
         
-            <Header colorScheme={colorScheme}>
-              <BTLogo/>
-              <BigGithubIcon />
-              <Providers>
-              <ThemeToggle/>
-              </Providers>
-            </Header>
+        <Header>
+          <BTLogo/>
+          <HandlesAndResume/>  
+          <Providers>
+          <ThemeToggle/>
+          </Providers>
+        </Header>
           
 
-            {children}
-
-          
-      
-        {/* <Header colorScheme={colorScheme}>
-            <BTLogo/>
-            <BigGithubIcon />
-            <ThemeToggle/>
-        </Header> */}
-
-        {/* {children} */}
+        {children}
 
         <Footer>
           <RightsReserved/>

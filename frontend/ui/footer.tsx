@@ -2,12 +2,12 @@ import Container from "./container";
 
 function Footer(props: any) {
     return ( 
-        <footer className="dark:bg-dark bg-[#f4f4f4] ">
-            <Container>
-                <div className="flex flex-col lg:flex-row gap-1 justify-between p-6 py-8">
+        <footer className="dark:bg-dark bg-[#fffefe] ">
+            <div className="max-w-[720px] m-auto">
+                <div className="flex flex-col lg:flex-row lg:justify-between gap-4 items-center pt-16 py-12 xl:px-4">
                     {props.children}
                 </div>
-            </Container>
+            </div>
         </footer>
      );
 }

@@ -7,17 +7,16 @@ import FlexBox from "@/ui/flexbox";
 function HeroSection() {
     return (
         <main 
-            className="bg-[#f4f4f4] dark:bg-dark"
+            className="bg-[#fffefe] dark:bg-dark py-8"
             >
-            <Container>
+            <div className="max-w-[720px] m-auto">
                 <div 
-                    className="flex flex-col items-center gap-16 px-4 lg:flex-row  xl:pr-16  lg:px-8 lg:py-16  xl:gap-16 "
+                    className="flex flex-col items-center gap-16  lg:flex-row     lg:py-16   "
                 >
                     <Avatar/>       
                     <Bio/>
-                    <HandlesAndResume/>  
                 </div>
-            </Container>
+            </div>
         </main>
     );
 }
