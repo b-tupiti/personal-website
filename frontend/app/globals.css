@@ -22,4 +22,13 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--theme-color);
   box-sizing: border-box;
+
+  /*setting grid here to push header and footer to top and bottom, irregardless of the content in the middle*/
+  min-height: 100vh;
+  min-height: 100dvh; /* optimized for mobile devices. browsers will likely use top */
+  display: grid;
+  grid-template-rows: 
+    auto
+    1fr
+    auto;
 }
