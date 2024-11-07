@@ -3,35 +3,143 @@
         "id": 1,
         "slug": "introduction-to-cloud-computing",
         "title": "Introduction to Cloud Computing",
+        "postImageURL": "/images/sample-img.jpeg",
         "readTime": "7 min read",
-        "content": "Cloud computing is the delivery of computing services over the internet..."
+        "body": [
+            {
+                "contentType": "paragraph",
+                "content": "Cloud computing is the delivery of computing services over the internet, including storage, processing, and software applications. It allows businesses and individuals to access and use these services on a pay-as-you-go basis, without having to manage the underlying infrastructure."
+            },
+            {
+                "contentType": "codebase",
+                "content": "def calculate_cloud_cost(usage, price_per_gb):\n    return usage * price_per_gb\n\nusage = 1000\nprice_per_gb = 0.05\nprint(calculate_cloud_cost(usage, price_per_gb))"
+            },
+            {
+                "contentType": "image",
+                "content": "/images/sample-img.jpeg"
+            },
+            {
+                "contentType": "paragraph",
+                "content": "One of the primary advantages of cloud computing is its flexibility. Cloud platforms offer a range of services that can be customized to fit the needs of different users. From Infrastructure-as-a-Service (IaaS), which provides virtualized computing resources, to Software-as-a-Service (SaaS), which allows users to access software applications via the internet, cloud computing makes it easier to access the tools and capabilities required for various industries. Furthermore, with Platform-as-a-Service (PaaS), developers can build, test, and deploy applications without worrying about the underlying infrastructure."
+            },
+            {
+                "contentType": "quote",
+                "content": "The cloud is not just a technology, but a new way of thinking about the future of computing."
+            },
+            {
+                "contentType": "paragraph",
+                "content": "Another key benefit of cloud computing is its accessibility. Cloud-based services are accessible from anywhere with an internet connection, making them ideal for remote work and collaboration. Teams can work together on projects in real-time, regardless of their physical locations. This has become particularly important in today's globalized business environment, where teams are often spread across different regions and time zones."
+            },
+            {
+                "contentType": "paragraph",
+                "content": "As the adoption of cloud computing continues to rise, it also drives innovation in artificial intelligence, machine learning, and data analytics. Many cloud platforms now offer advanced analytics tools and machine learning models, enabling businesses to leverage these technologies without the need for extensive infrastructure or specialized expertise. This opens up new opportunities for companies of all sizes to incorporate data-driven insights into their operations, creating a more efficient and competitive business environment."
+            }
+        ],
+        "date": "September 15, 2024",
+        "author": "Brandon"
     },
     {
         "id": 2,
         "slug": "benefits-of-data-lakes",
         "title": "Benefits of Data Lakes",
         "readTime": "5 min read",
-        "content": "Data lakes allow organizations to store large volumes of raw data for future analysis..."
+        "body": [
+            {
+                "contentType": "paragraph",
+                "content": "Data lakes allow organizations to store large volumes of raw data in its native format, making it easier to analyze and derive insights. They support a variety of data contentTypes, including structured, semi-structured, and unstructured data, and enable scalability and flexibility in handling big data."
+            },
+            {
+                "contentType": "codebase",
+                "content": "def process_data(data):\n    # Sample code to process raw data\n    return data.lower().strip()"
+            },
+            {
+                "contentType": "image",
+                "content": "/images/sample-img.jpeg"
+            },
+            {
+                "contentType": "quote",
+                "content": "A data lake is a powerful tool for storing vast amounts of raw data, but only if you can extract value from it."
+            }
+        ],
+        "date": "October 5, 2024",
+        "author": "Brandon"
     },
     {
         "id": 3,
         "slug": "getting-started-with-hdfs",
         "title": "Getting Started with HDFS",
         "readTime": "2 min read",
-        "content": "Hadoop Distributed File System (HDFS) is designed to store large data sets reliably..."
+        "body": [
+            {
+                "contentType": "paragraph",
+                "content": "Hadoop Distributed File System (HDFS) is designed to store large data sets reliably across many machines. It provides high throughput and fault tolerance, making it suitable for applications that require the processing of large amounts of data."
+            },
+            {
+                "contentType": "codebase",
+                "content": "from hdfs import InsecureClient\nclient = InsecureClient('http://localhost:50070')\nfile = client.read('/user/hadoop/input.txt')\nprint(file)"
+            },
+            {
+                "contentType": "image",
+                "content": "/images/sample-img.jpeg"
+            },
+            {
+                "contentType": "quote",
+                "content": "HDFS is the backbone for large-scale data storage, ensuring reliability and scalability for distributed data processing."
+            }
+        ],
+        "date": "October 20, 2024",
+        "author": "Brandon"
     },
     {
         "id": 4,
         "slug": "what-is-mapreduce",
         "title": "What is MapReduce?",
         "readTime": "1 min read",
-        "content": "MapReduce is a programming model for processing large data sets with a distributed algorithm..."
+        "body": [
+            {
+                "contentType": "paragraph",
+                "content": "MapReduce is a programming model used to process large data sets in a distributed manner, breaking tasks into smaller sub-tasks that can be processed in parallel. It consists of two primary phases: the 'Map' phase, which processes input data, and the 'Reduce' phase, which aggregates the results."
+            },
+            {
+                "contentType": "codebase",
+                "content": "def map_function(data):\n    return data.split()  # Split data into words\n\ndef reduce_function(mapped_data):\n    return sum(mapped_data)  # Sum the word counts"
+            },
+            {
+                "contentType": "image",
+                "content": "/images/sample-img.jpeg"
+            },
+            {
+                "contentType": "quote",
+                "content": "MapReduce empowers scalable and parallel data processing, handling the complexities of distributed computation with ease."
+            }
+        ],
+        "date": "November 1, 2024",
+        "author": "Brandon"
     },
     {
         "id": 5,
         "slug": "spark-vs-mapreduce",
         "title": "Spark vs. MapReduce: A Comparison",
         "readTime": "10 min read",
-        "content": "Apache Spark and MapReduce are both popular tools for big data processing, but they differ in speed and efficiency..."
+        "body": [
+            {
+                "contentType": "paragraph",
+                "content": "Apache Spark and MapReduce are both popular frameworks for processing big data, but they have significant differences in performance and functionality. While MapReduce is based on disk-based storage, Spark uses in-memory computation, which makes it faster for iterative tasks. Spark also provides higher-level APIs and more advanced libraries."
+            },
+            {
+                "contentType": "codebase",
+                "content": "from pyspark import SparkContext\nsc = SparkContext('local', 'word_count')\ntext = sc.textFile('input.txt')\nword_count = text.flatMap(lambda line: line.split(' ')).countByValue()\nprint(word_count)"
+            },
+            {
+                "contentType": "image",
+                "content": "/images/sample-img.jpeg"
+            },
+            {
+                "contentType": "quote",
+                "content": "While MapReduce is effective for batch processing, Spark's in-memory computation offers a significant speed advantage for real-time analytics."
+            }
+        ],
+        "date": "November 3, 2024",
+        "author": "Brandon"
     }
 ]
