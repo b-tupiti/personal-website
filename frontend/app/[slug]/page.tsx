@@ -35,15 +35,15 @@ export default function Post({ params }: { params: { slug: string } }) {
   else {
     return (
       <section className='dark:bg-dark dark:text-white'>
-        <div className="max-w-[720px] m-auto px-16 py-8 lg:py-0 lg:px-0">
-          <div className='flex flex-col gap-6'>
+        <div className="w-dvw lg:max-w-[720px] m-auto p-8 lg:py-0 lg:px-0">
+          <div className='flex flex-col gap-y-6'>
 
-          <div style={{ width: '100%', height: '300px', position: 'relative' }}> {/* Fixed height */}
+          <div style={{ width: '100%', height: '300px', position: 'relative' }}> 
             <Image 
               src={post.postImageURL} 
               alt="Sample Image"
               layout="fill"
-              objectFit="cover" // Fills the container, cropping if necessary
+              objectFit="cover" 
             />
           </div>
             
@@ -56,7 +56,7 @@ export default function Post({ params }: { params: { slug: string } }) {
             </div>
 
             <div className='mt-8'>
-            <Title>{post.title}</Title>
+              <Title>{post.title}</Title>
             </div>
          
             {post.body.map((item, index) => {
@@ -76,9 +76,13 @@ export default function Post({ params }: { params: { slug: string } }) {
                           ;
                 case 'code':
                   return (
-                    <pre key={index}>
-                      <code>{item.content}</code>
-                    </pre>
+                    
+                    // <div key={index} className='py-1 border border-red-300 min-w-full max-w-full m-auto overflow-x-scroll'>
+                      <pre key={index} className=' rounded  p-4 pb-6 bg-[#07151f] overflow-x-scroll'>
+                      <code className='font-mono font-light text-slate-300' >{item.content}</code>
+                      </pre>
+                    // </div>
+                    
                   );
                 default:
                   return null;

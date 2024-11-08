@@ -11,8 +11,8 @@
                 "content": "Cloud computing is the delivery of computing services over the internet, including storage, processing, and software applications. It allows businesses and individuals to access and use these services on a pay-as-you-go basis, without having to manage the underlying infrastructure."
             },
             {
-                "contentType": "codebase",
-                "content": "def calculate_cloud_cost(usage, price_per_gb):\n    return usage * price_per_gb\n\nusage = 1000\nprice_per_gb = 0.05\nprint(calculate_cloud_cost(usage, price_per_gb))"
+                "contentType": "code",
+                "content": "def calculate_cloud_cost(usage, price_per_gb):\n    return usage * price_per_gb * price_per_gb * price_per_gb * price_per_gb\n\nusage = 1000\nprice_per_gb = 0.05\nprint(calculate_cloud_cost(usage, price_per_gb))"
             },
             {
                 "contentType": "image",
@@ -50,7 +50,7 @@
                 "content": "Data lakes allow organizations to store large volumes of raw data in its native format, making it easier to analyze and derive insights. They support a variety of data contentTypes, including structured, semi-structured, and unstructured data, and enable scalability and flexibility in handling big data."
             },
             {
-                "contentType": "codebase",
+                "contentType": "code",
                 "content": "def process_data(data):\n    # Sample code to process raw data\n    return data.lower().strip()"
             },
             {
@@ -77,7 +77,7 @@
                 "content": "Hadoop Distributed File System (HDFS) is designed to store large data sets reliably across many machines. It provides high throughput and fault tolerance, making it suitable for applications that require the processing of large amounts of data."
             },
             {
-                "contentType": "codebase",
+                "contentType": "code",
                 "content": "from hdfs import InsecureClient\nclient = InsecureClient('http://localhost:50070')\nfile = client.read('/user/hadoop/input.txt')\nprint(file)"
             },
             {
@@ -104,7 +104,7 @@
                 "content": "MapReduce is a programming model used to process large data sets in a distributed manner, breaking tasks into smaller sub-tasks that can be processed in parallel. It consists of two primary phases: the 'Map' phase, which processes input data, and the 'Reduce' phase, which aggregates the results."
             },
             {
-                "contentType": "codebase",
+                "contentType": "code",
                 "content": "def map_function(data):\n    return data.split()  # Split data into words\n\ndef reduce_function(mapped_data):\n    return sum(mapped_data)  # Sum the word counts"
             },
             {
@@ -131,7 +131,7 @@
                 "content": "Apache Spark and MapReduce are both popular frameworks for processing big data, but they have significant differences in performance and functionality. While MapReduce is based on disk-based storage, Spark uses in-memory computation, which makes it faster for iterative tasks. Spark also provides higher-level APIs and more advanced libraries."
             },
             {
-                "contentType": "codebase",
+                "contentType": "code",
                 "content": "from pyspark import SparkContext\nsc = SparkContext('local', 'word_count')\ntext = sc.textFile('input.txt')\nword_count = text.flatMap(lambda line: line.split(' ')).countByValue()\nprint(word_count)"
             },
             {
