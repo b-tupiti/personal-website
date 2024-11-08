@@ -42,6 +42,7 @@
         "id": 2,
         "slug": "benefits-of-data-lakes",
         "title": "Benefits of Data Lakes",
+        "postImageURL": "/images/sample-img.jpeg",
         "readTime": "5 min read",
         "body": [
             {
@@ -68,6 +69,7 @@
         "id": 3,
         "slug": "getting-started-with-hdfs",
         "title": "Getting Started with HDFS",
+        "postImageURL": "/images/sample-img.jpeg",
         "readTime": "2 min read",
         "body": [
             {
@@ -94,6 +96,7 @@
         "id": 4,
         "slug": "what-is-mapreduce",
         "title": "What is MapReduce?",
+        "postImageURL": "/images/sample-img.jpeg",
         "readTime": "1 min read",
         "body": [
             {
@@ -120,6 +123,7 @@
         "id": 5,
         "slug": "spark-vs-mapreduce",
         "title": "Spark vs. MapReduce: A Comparison",
+        "postImageURL": "/images/sample-img.jpeg",
         "readTime": "10 min read",
         "body": [
             {
