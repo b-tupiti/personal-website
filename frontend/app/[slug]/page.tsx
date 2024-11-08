@@ -5,7 +5,7 @@ import Title from '@/ui/title';
 import Image from 'next/image';
 import { CalendayDaysIcon } from '@/icons/icons';
 import Code from '@/components/code';
-
+import { notFound } from 'next/navigation';
 
 
 type PostContent = {
@@ -35,7 +35,7 @@ export default function Post({ params }: { params: { slug: string } }) {
   const post: Post | undefined = posts.find(post => post.slug === params.slug);
 
   if(!post){
-    return <h1>Post not found</h1>;
+    return notFound();
   }
   else {
     return (
