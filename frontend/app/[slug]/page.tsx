@@ -71,13 +71,13 @@ export default function Post({ params }: { params: { slug: string } }) {
                 case 'quote':
                   return <blockquote className='p-4 text-lg border-l-4 bg-slate-200 dark:bg-slate-700' key={index}>&ldquo;{item.content}&rdquo;</blockquote>;
                 case 'image':
-                  return <Image 
+                  return <div style={{ width: '100%', height: '300px', position: 'relative' }}><Image 
                           key={index} 
                           src={item.content} 
-                          width={200}
-                          height={200}
+                          layout="fill"
+                          objectFit="cover"
                           alt="Post image" 
-                          />
+                          /></div>
                           ;
                 case 'code':
                   return (
