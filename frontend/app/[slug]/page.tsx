@@ -1,8 +1,12 @@
+
 // importing and assigning blogs data
 import blogsData from '@/posts.json';
 import Title from '@/ui/title';
 import Image from 'next/image';
 import { CalendayDaysIcon } from '@/icons/icons';
+import Code from '@/components/code';
+
+
 
 type PostContent = {
   contentType: 'paragraph' | 'quote' | 'image' | 'code',
@@ -27,6 +31,7 @@ const posts: Post[] = blogsData as Post[];
 
 export default function Post({ params }: { params: { slug: string } }) {
 
+  
   const post: Post | undefined = posts.find(post => post.slug === params.slug);
 
   if(!post){
@@ -76,13 +81,7 @@ export default function Post({ params }: { params: { slug: string } }) {
                           ;
                 case 'code':
                   return (
-                    
-                    // <div key={index} className='py-1 border border-red-300 min-w-full max-w-full m-auto overflow-x-scroll'>
-                      <pre key={index} className=' rounded  p-4 pb-6 bg-[#07151f] overflow-x-scroll'>
-                      <code className='font-mono font-light text-slate-300' >{item.content}</code>
-                      </pre>
-                    // </div>
-                    
+                      <Code content={item.content}/>
                   );
                 default:
                   return null;
@@ -90,6 +89,7 @@ export default function Post({ params }: { params: { slug: string } }) {
             })}
           </div>
         </div>
+        
       </section>
     )
   }
