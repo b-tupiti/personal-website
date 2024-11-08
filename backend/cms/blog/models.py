@@ -1,4 +1,5 @@
 from django.db import models
+from grapple.models import GraphQLString, GraphQLStreamfield
 
 # Add these:
 from wagtail.models import Page
@@ -14,4 +15,10 @@ class BlogPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('date'),
         FieldPanel('body'),
+    ]
+
+    # add fields to graphQL
+    graphql_fields = [
+        GraphQLString("date"),
+        GraphQLString("body"),
     ]
