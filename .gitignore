@@ -43,3 +43,6 @@ next-env.d.ts
 
 # pycache
 __pycache__/
+
+# axios - quick testing for graphql endpoints
+/axios 
