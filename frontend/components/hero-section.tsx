@@ -1,8 +1,5 @@
 import Avatar from "@/components/avatar";
 import Bio from "@/components/bio";
-import HandlesAndResume from "@/components/handles-n-resume";
-import Container from "@/ui/container";
-import FlexBox from "@/ui/flexbox";
 
 function HeroSection() {
     return (
