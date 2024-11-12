@@ -46,3 +46,6 @@ __pycache__/
 
 # axios - quick testing for graphql endpoints
 /axios 
+
+# file uploads in wagtail
+/backend/cms/media
