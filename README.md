@@ -1,3 +1,3 @@
 ### Personal Website
 
-A portfolio/blog website I built with Nextjs, GraphQL, and Wagtail.
+Personal portfolio/blog website - built with [Nextjs](https://nextjs.org/), [GraphQL](https://graphql.org/), and [Wagtail](https://wagtail.org/).
