@@ -1,5 +1,6 @@
 import axios from "axios";
 import PostItem from "./post-item";
+import { isElementOfType } from "react-dom/test-utils";
 
 const endpoint = 'http://localhost:8000/api/graphql/';
 
@@ -26,7 +27,7 @@ type Post = {
 
 async function LatestPosts() {
 
-    let data = await axios.post(
+    let obj = await axios.post(
         endpoint,
         graphqlQuery, 
         {
@@ -40,8 +41,17 @@ async function LatestPosts() {
         .catch(error => {
           return error;
         });
-      
-    let postItems = data;
+    
+    if((obj instanceof Error)){
+      return (
+        <div className="text-slate-400 mr-auto">
+          cannot retrieve posts.
+        </div>
+      )
+    }
+    else {
+      let postItems = obj;
+    
     return ( 
         <>
             {postItems.map((post: Post) => (
@@ -54,6 +64,7 @@ async function LatestPosts() {
             }
         </>
      );
+    }
 }
 
 export default LatestPosts;
