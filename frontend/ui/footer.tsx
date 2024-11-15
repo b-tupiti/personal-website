@@ -1,11 +1,11 @@
-import Container from "./container";
+import { ReactNode } from "react";
 
-function Footer(props: any) {
+const Footer = ({children}: {children: ReactNode}) => {
     return ( 
         <footer className="dark:bg-dark bg-[#fffefe] ">
             <div className="max-w-[720px] m-auto">
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-4 items-center pt-16 py-12 pb-8 ">
-                    {props.children}
+                    {children}
                 </div>
             </div>
         </footer>
