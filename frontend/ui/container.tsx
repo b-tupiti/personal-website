@@ -1,7 +1,9 @@
-function Container(props: any) {
+import { ReactNode } from "react";
+
+const Container = ({children}: {children: ReactNode}) => {
     return (
         <div className="max-w-[1120px] m-auto">
-            {props.children}
+            {children}
         </div>
     );
 }
