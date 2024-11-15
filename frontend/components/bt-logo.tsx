@@ -4,11 +4,19 @@ import logoDark from "@/assets/bt-dark.svg";
 import logoLight from "@/assets/bt-light.svg";
 
 
-function BTLogo() {
+const BTLogo = () => {
     return ( 
         <Link href={'/'}>
-            <Image className="w-12 xl:w-16 hidden dark:block" src={logoDark} alt={'logo'}/>            
-            <Image className="w-12 xl:w-16 dark:hidden" src={logoLight} alt={'logo'}/>            
+            <Image 
+                className="w-12 xl:w-16 hidden dark:block" 
+                src={logoDark} 
+                alt={'logo'}
+                />            
+            <Image 
+                className="w-12 xl:w-16 dark:hidden" 
+                src={logoLight} 
+                alt={'logo'}
+                />            
         </Link>
      );
 }
