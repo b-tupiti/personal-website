@@ -8,7 +8,6 @@ import Header from '@/ui/header';
 import Footer from '@/ui/footer';
 
 // solid components
-import BigGithubIcon from '@/components/big-github-icon';
 import BTLogo from '@/components/bt-logo';
 import RightsReserved from '@/components/rights-reserved';
 import PoweredBy from '@/components/powered-by';
