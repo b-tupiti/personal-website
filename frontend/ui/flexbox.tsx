@@ -1,15 +1,16 @@
+import { ReactNode } from "react";
 
 /**
  * Only use flexbox properties from tailwind
  * @param props 
  * @returns 
  */
-function FlexBox(props: any) {
+const FlexBox = ({children, twstyle}: {children: ReactNode, twstyle: string}) => {
     return (  
         <div 
-            className={props.twstyle}
+            className={twstyle}
         >
-            {props.children}
+            {children}
         </div>
     );
 }
