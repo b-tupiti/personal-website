@@ -1,7 +1,6 @@
 import TextXS from "@/ui/text-xs";
 
-function RightsReserved() {
-    
+const RightsReserved = () => {
     return ( 
         <TextXS>
             All rights reserved. &copy;  Brandon Tupiti 2023
