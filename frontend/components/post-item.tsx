@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import nookIcon from '@/assets/icons/nook-icon.svg';
 import { ArrowLongRightIcon } from '@/icons/icons';
 
 type PostItemProps = {
@@ -9,7 +7,7 @@ type PostItemProps = {
     slug: string,
 }
 
-function PostItem(post: PostItemProps){
+const PostItem = (post: PostItemProps) => {
     return (
 
         <Link 
