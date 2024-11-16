@@ -1,7 +1,6 @@
 import TextXS from "@/ui/text-xs";
 
-function PoweredBy() {
-    
+const PoweredBy = () => {
     return ( 
         <TextXS>
             Powered by AWS Fargate
