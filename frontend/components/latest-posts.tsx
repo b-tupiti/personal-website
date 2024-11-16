@@ -1,6 +1,5 @@
 import axios from "axios";
 import PostItem from "./post-item";
-import { isElementOfType } from "react-dom/test-utils";
 
 const endpoint = 'http://localhost:8000/api/graphql/';
 
@@ -25,7 +24,7 @@ type Post = {
     readTime: string;
 }
 
-async function LatestPosts() {
+const LatestPosts = async() => {
 
     let obj = await axios.post(
         endpoint,
