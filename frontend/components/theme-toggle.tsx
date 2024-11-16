@@ -3,7 +3,8 @@ import { MoonIcon, SunIcon } from "@/icons/icons";
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react";
 
-function ThemeToggle() {
+// TODO: This needs to be tidied
+const ThemeToggle = () => {
     const [mounted, setMounted] = useState(false);
     const {setTheme, resolvedTheme} = useTheme();
 
@@ -22,8 +23,6 @@ function ThemeToggle() {
             setTheme('dark');
         }
     }
-
-    
 
     return ( 
         <div className=" dark:bg-slate-800 bg-slate-200 w-16 p-2 rounded-full cursor-pointer" onClick={toggle}>
