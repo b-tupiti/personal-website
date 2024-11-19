@@ -1,7 +1,7 @@
 import FlexBox from "@/ui/flexbox";
 import Link from "next/link";
 
-const HandlesAndResume = () => {
+const NavLinks = () => {
     // TODO: fetch from the backend
     const links = [
         {
@@ -40,5 +40,5 @@ const HandlesAndResume = () => {
     );
 }
 
-export default HandlesAndResume;
+export default NavLinks;
 
