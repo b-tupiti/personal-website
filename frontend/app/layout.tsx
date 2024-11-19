@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import {Providers} from "./theme-provider";
 
 // ui components
-import Header from '@/ui/header';
+import Header from '@/components/header';
 
 // solid components
 import Footer from '@/components/footer';

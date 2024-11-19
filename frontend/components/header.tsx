@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Container from "./container";
-import FlexBox from "./flexbox";
+import Container from "../ui/container";
+import FlexBox from "../ui/flexbox";
 
 const Header = ({children}: {children: ReactNode}) => {
     return (  
