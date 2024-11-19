@@ -5,12 +5,10 @@ import {Providers} from "./theme-provider";
 
 // ui components
 import Header from '@/ui/header';
-import Footer from '@/ui/footer';
 
 // solid components
+import Footer from '@/components/footer';
 import BTLogo from '@/components/bt-logo';
-import RightsReserved from '@/components/rights-reserved';
-import PoweredBy from '@/components/powered-by';
 import ThemeToggle from '@/components/theme-toggle';
 import HandlesAndResume from '@/components/handles-n-resume';
 
@@ -44,10 +42,7 @@ export default function RootLayout({
         
         {children}
 
-        <Footer>
-          <RightsReserved/>
-          <PoweredBy/>
-        </Footer>
+        <Footer/>
 
       </body>
     </html>
