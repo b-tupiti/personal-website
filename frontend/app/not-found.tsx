@@ -1,9 +1,12 @@
+import Container from "@/ui/container";
 import Link from "next/link";
 
 function NotFound() {
     return (
     <div className="dark:bg-dark">
-        <div className="max-w-[720px] m-auto">
+        <Container
+            className="max-w-[720px]"
+            >
             <div className="flex flex-col p-8 gap-y-4 items-center">
                 <h2 className="dark:text-slate-400 text-slate-500 font-bold text-2xl">Oops, Sorry!</h2>
                 <p className="dark:text-slate-300 text-slate-700 text-sm">Nothing to see here.</p>
@@ -14,7 +17,7 @@ function NotFound() {
                         Go back
                 </Link>
             </div>
-        </div>
+        </Container>
     </div>
     );
 }
