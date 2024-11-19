@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Container from "../../ui/container";
 import FlexBox from "../../ui/flexbox";
-import BTLogo from "./bt-logo";
+import BTLogo from "./logo";
 import HandlesAndResume from "./nav-links";
 import { Providers } from "@/app/theme-provider";
 import ThemeToggle from "./theme-toggle";

@@ -4,7 +4,7 @@ import logoDark from "@/assets/bt-dark.svg";
 import logoLight from "@/assets/bt-light.svg";
 
 
-const BTLogo = () => {
+const Logo = () => {
     return ( 
         <Link href={'/'}>
             <Image 
@@ -21,4 +21,4 @@ const BTLogo = () => {
      );
 }
 
-export default BTLogo;
+export default Logo;
