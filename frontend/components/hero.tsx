@@ -2,7 +2,7 @@ import Avatar from "@/components/avatar";
 import Bio from "@/components/bio";
 import Container from "@/ui/container";
 
-const HeroSection = () => {
+const Hero = () => {
     return (
         <main 
             className="bg-[#fffefe] dark:bg-dark py-8"
@@ -19,4 +19,4 @@ const HeroSection = () => {
     );
 }
 
-export default HeroSection;
+export default Hero;
