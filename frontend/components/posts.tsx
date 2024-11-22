@@ -3,7 +3,7 @@ import LatestPosts from './latest-posts';
 import Container from "@/ui/container";
 
 // TODO: This section should not render if data fetch fails
-const LatestPostsSection = () => {
+const Posts = () => {
 
     return (
       <section 
@@ -30,4 +30,4 @@ const LatestPostsSection = () => {
     );
 }
 
-export default LatestPostsSection;
+export default Posts;
