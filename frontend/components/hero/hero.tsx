@@ -1,5 +1,5 @@
-import Avatar from "@/components/avatar";
-import Bio from "@/components/bio";
+import Avatar from "@/components/hero/avatar";
+import Bio from "@/components/hero/bio";
 import Container from "@/ui/container";
 
 const Hero = () => {
