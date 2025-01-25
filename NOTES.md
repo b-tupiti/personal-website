@@ -1,6 +1,6 @@
 ### Notes to Self:
 
-### Wagtail Backend
+### backend: wagtail
 ___
 Starting up virtual environment on backend.
 
@@ -11,3 +11,10 @@ Firing up backend dev server.
 navigate into cms folder.
 
 run `python manage.py runserver`
+
+### frontend: nextjs
+___
+
+Navigate to frontend folder.
+
+run `npm run dev`
