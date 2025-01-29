@@ -26,4 +26,5 @@ class BlogPage(Page):
     graphql_fields = [
         GraphQLString("date"),
         GraphQLStreamfield("body"),
+        GraphQLString("owner"),
     ]
