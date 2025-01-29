@@ -1,21 +1,7 @@
-import axios from "axios";
 import PostItem from "./post-item";
-
-const endpoint = 'http://localhost:8000/api/graphql/';
-
-const graphqlQuery = {
-  query: `
-  query Pages {
-  pages {
-      ... on BlogPage {
-          id
-          title
-          slug
-      }
-  }
-}
-  `
-}
+import { getLatestPostsGQL } from "@/gql-lib/queries";
+import { gqlFetch } from "@/gql-lib/gql-fetch";
+import Title from "@/ui/title";
 
 type Post = {
     id: number;
@@ -26,44 +12,38 @@ type Post = {
 
 const LatestPosts = async() => {
 
-    let obj = await axios.post(
-        endpoint,
-        graphqlQuery, 
-        {
-          headers: {
-            'Content-Type': 'application/json'
+  const query = getLatestPostsGQL();
+  const obj = await gqlFetch(query);
+    
+  if((obj instanceof Error))
+    return null;
+  
+  let postItems = obj.data.data.pages;
+    
+  return ( 
+      
+      <div 
+            className="flex flex-col items-center md:items-start"
+          >
+          <Title>
+              Latest posts
+          </Title> 
+
+          <div 
+              className="flex flex-col items-center mt-8"
+              >
+          {
+          postItems.map((post: Post) => (
+              <PostItem
+              key={post.id}
+              readTime={post.readTime}
+              title={post.title}
+              slug={post.slug}
+              />))
           }
-        })
-        .then(response => {
-          return response.data.data.pages;
-        })
-        .catch(error => {
-          return error;
-        });
-    
-    if((obj instanceof Error)){
-      return (
-        <div className="text-slate-400 mr-auto">
-          cannot retrieve posts.
+          </div>
         </div>
-      )
-    }
-    else {
-      let postItems = obj;
-    
-    return ( 
-        <>
-            {postItems.map((post: Post) => (
-                <PostItem
-                key={post.id}
-                readTime={post.readTime}
-                title={post.title}
-                slug={post.slug}
-                />))
-            }
-        </>
-     );
-    }
+  );
 }
 
 export default LatestPosts;
