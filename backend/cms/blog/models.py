@@ -6,7 +6,7 @@ from wagtail.models import Page
 from wagtail.fields import StreamField
 from wagtail.admin.panels import FieldPanel
 from wagtail.images.blocks import ImageChooserBlock
-from wagtail.blocks import RichTextBlock, BlockQuoteBlock
+from wagtail.blocks import RichTextBlock, BlockQuoteBlock, TextBlock
 
 class BlogPage(Page):
 
@@ -15,6 +15,7 @@ class BlogPage(Page):
         ('paragraph', RichTextBlock()),
         ('quote', BlockQuoteBlock(max_length=100, help_text='quote')),
         ('image', ImageChooserBlock(required=False)),
+        ('code', TextBlock()),
     ])
 
     content_panels = Page.content_panels + [

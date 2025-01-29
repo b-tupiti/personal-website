@@ -44,8 +44,7 @@ async function PostPage({ params }: { params: { slug: string } }) {
   {post.body.map((item: any, index: number) => {
     switch (item.field) {
       case 'paragraph':
-        // return <p className='text-slate-700 dark:text-slate-300 tracking-normal leading-loose' key={index}>{item.rawValue}</p>;
-        return <div key={index} dangerouslySetInnerHTML={{ __html: item.rawValue }}></div>
+        return <div className='text-slate-700 dark:text-slate-300 tracking-normal leading-loose' key={index} dangerouslySetInnerHTML={{ __html: item.rawValue }}></div>
       case 'quote':
         return <blockquote className='p-4 text-lg border-l-4 bg-slate-200 dark:bg-slate-700' key={index}>&ldquo;{item.rawValue}&rdquo;</blockquote>;
       case 'image':
@@ -57,10 +56,10 @@ async function PostPage({ params }: { params: { slug: string } }) {
                 alt="Post image" 
                 /></div>
                 ;
-      // case 'code':
-      //   return (
-      //       <Code key={index} content={item.content}/>
-      //   );
+      case 'code':
+        return (
+            <Code key={index} content={item.rawValue}/>
+        );
       default:
         return null;
     }
