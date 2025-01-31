@@ -1,0 +1,1 @@
+docker compose -f compose.dev.yml up --build -d && cd frontend && npm run dev
