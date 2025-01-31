@@ -1,8 +1,0 @@
-services:
-
-  backend:
-    container_name: app-backend
-    build:
-      context: ./backend/cms
-    ports:
-      - 80:8000
