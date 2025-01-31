@@ -43,24 +43,26 @@ async function PostPage({ params }: {
 
 
   <section className='flex flex-col gap-y-10'>
-  {post.body.map((item: any, index: number) => {
+  {post.body.map((item: any) => {
     switch (item.field) {
       case 'paragraph':
-        return <div className='text-slate-700 dark:text-slate-300 tracking-normal leading-loose' key={index} dangerouslySetInnerHTML={{ __html: item.rawValue }}></div>
+        return <div className='text-slate-700 dark:text-slate-300 tracking-normal leading-loose' key={item.id} dangerouslySetInnerHTML={{ __html: item.rawValue }}></div>
       case 'quote':
-        return <blockquote className='p-4 text-lg border-l-4 bg-slate-200 dark:bg-slate-700' key={index}>&ldquo;{item.rawValue}&rdquo;</blockquote>;
+        return <blockquote className='p-4 text-lg border-l-4 bg-slate-200 dark:bg-slate-700' key={item.id}>&ldquo;{item.rawValue}&rdquo;</blockquote>;
       case 'image':
-        return <div style={{ width: '100%', height: '300px', position: 'relative' }}><Image 
-                key={index} 
-                src={item.image.url} 
-                layout="fill"
-                objectFit="cover"
-                alt="Post image" 
-                /></div>
-                ;
+        return <div 
+                  key={item.id}  
+                  style={{ width: '100%', height: '300px', position: 'relative' }}>
+                    <Image 
+                      src={item.image.url} 
+                      fill
+                      style={{ objectFit: "cover" }} 
+                      alt="Post image"/>
+                </div>
+      ;
       case 'code':
         return (
-            <Code key={index} content={item.rawValue}/>
+            <Code key={item.id} content={item.rawValue}/>
         );
       default:
         return null;
@@ -68,7 +70,6 @@ async function PostPage({ params }: {
   })} 
   </section>
 
-  <Code content={"def showsum():"}/>
 </div>
 </div>
         
