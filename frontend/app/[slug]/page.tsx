@@ -7,9 +7,11 @@ import { getPostBySlugGQL } from '../../gql-lib/queries';
 import { gqlFetch } from '@/gql-lib/gql-fetch';
 
 
-async function PostPage({ params }: { params: { slug: string } }) {
+async function PostPage({ params }: {
+  params: Promise<{ slug: string }>
+}) {
 
-  const query = getPostBySlugGQL(params.slug);
+  const query = getPostBySlugGQL((await params).slug);
   const obj = await gqlFetch(query);
 
   if (obj instanceof Error)
