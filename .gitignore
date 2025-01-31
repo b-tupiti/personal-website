@@ -47,3 +47,6 @@ __pycache__/
 
 # file uploads in wagtail
 /backend/cms/media
+
+# bat file
+*.bat
