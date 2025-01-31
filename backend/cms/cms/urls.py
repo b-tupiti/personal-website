@@ -10,7 +10,7 @@ from grapple import urls as grapple_urls
 
 urlpatterns = [
     path("api/", include(grapple_urls)),
-    path("", include(wagtailadmin_urls)),
+    path("admin/", include(wagtailadmin_urls)),
     path("django-admin/", admin.site.urls),
     path("documents/", include(wagtaildocs_urls)),
 ]
