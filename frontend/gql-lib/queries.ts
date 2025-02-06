@@ -25,17 +25,22 @@ function getPostBySlugGQL(slug: string){
   }`
 }
 
+
+
 function getLatestPostsGQL(){
     return `
-    query Posts {
-        pages {
-            ... on BlogPage {
-                id
-                title
-                slug
-            }
+  query GetLatestBlogs {
+    pages(contentType: "Blog.BlogPage") {
+        __typename
+        ... on BlogPage {
+            id
+            title
+            date
+            url
+            slug
         }
     }
+}
     `
 }
 
