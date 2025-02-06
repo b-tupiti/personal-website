@@ -54,10 +54,12 @@ async function PostPage({ params }: {
                   key={item.id}  
                   style={{ width: '100%', height: '300px', position: 'relative' }}>
                     <Image 
-                      src={item.image.url} 
+                      src={`/media/${item.image.file}`} 
                       fill
                       style={{ objectFit: "cover" }} 
-                      alt="Post image"/>
+                      alt={`/media/${item.image.file}`} 
+                      unoptimized
+                       />
                 </div>
       ;
       case 'code':
