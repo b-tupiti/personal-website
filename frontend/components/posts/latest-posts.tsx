@@ -7,16 +7,16 @@ type Post = {
     id: number;
     slug: string;
     title: string;
-    readTime: string;
 }
 
-const LatestPosts = async() => {
+async function LatestPosts(){
 
   const query = getLatestPostsGQL();
   const obj = await gqlFetch(query);
-    
-  if((obj instanceof Error))
+
+  if(obj instanceof Error){
     return null;
+  }
   
   let postItems = obj.data.data.pages;
     
@@ -36,7 +36,6 @@ const LatestPosts = async() => {
           postItems.map((post: Post) => (
               <PostItem
               key={post.id}
-              readTime={post.readTime}
               title={post.title}
               slug={post.slug}
               />))

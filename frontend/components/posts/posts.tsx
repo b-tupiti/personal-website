@@ -1,7 +1,7 @@
 import LatestPosts from './latest-posts';
 import Container from "@/ui/container";
 
-const Posts = () => {
+const Posts = async() => {
     return (
       <section 
         className='dark:bg-dark  px-6 py-16'

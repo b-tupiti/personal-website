@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowLongRightIcon } from '@/icons/icons';
 
 type PostItemProps = {
-    readTime: string,
     title: string,
     slug: string,
 }
@@ -20,11 +19,6 @@ const PostItem = (post: PostItemProps) => {
                 className='font-semibold lg:text-md lg:col-span-4 text-slate-800 dark:text-white'
                 >
                 {post.title}
-            </span>
-            <span 
-                className='dark:text-slate-300 grid-cols-1 text-slate-600'
-                >
-                {post.readTime}
             </span>
           
             <ArrowLongRightIcon 
