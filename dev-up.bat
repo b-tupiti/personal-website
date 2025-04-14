@@ -1,1 +1,1 @@
-docker compose -f compose.dev.yml up --build -d && cd frontend && npm run dev
+docker compose -f compose.dev.yml build --no-cache && docker compose -f compose.dev.yml up -d && cd frontend && npm run dev
