@@ -1,11 +1,20 @@
-### Notes to Self:
+## Overview
 
-### Dev Scripts
+### Dev 
 ___
 
-run dev.bat or the following 
+1. run **dev-up.bat**
 
-`docker compose -f compose.dev.yml up --build -d && cd frontend && npm run dev`
+What runs in dev.bat?
+
+- docker triggers the build contexts in compose.dev.yml, which is only the backend service. The backend wagtail app is built here. 
+- The the services in compose.dev.yml are started in order: db, backend. The volumes also get created here, if they do not exist already. In the dev environment, only db and backend are containerized. The backend is exposed to localhost at port 8000.
+- the frontend nextjs app is run here.
+
+TODO: insert image
+
+
+
 
 ### backend: wagtail
 ___
