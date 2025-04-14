@@ -50,14 +50,17 @@ async function PostPage({ params }: {
       case 'quote':
         return <blockquote className='p-4 text-lg border-l-4 bg-slate-200 dark:bg-slate-700' key={item.id}>&ldquo;{item.rawValue}&rdquo;</blockquote>;
       case 'image':
+        // switch between item.image.url and .file, depending on environment.
         return <div 
                   key={item.id}  
                   style={{ width: '100%', height: '300px', position: 'relative' }}>
                     <Image 
-                      src={`/media/${item.image.file}`} 
+                      // src={item.image.url} 
+                      src={`/media/${item.image.file}`} // production code, since volumes are mapped
                       fill
                       style={{ objectFit: "cover" }} 
-                      alt={`/media/${item.image.file}`} 
+                      alt={`/media/${item.image.file}`} // production code, since volumes are mapped
+                      // alt={item.image.url} 
                       unoptimized
                        />
                 </div>
