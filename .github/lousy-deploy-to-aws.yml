@@ -1,0 +1,6 @@
+name: A lousy deployment that should never be used.
+
+on:
+  push:
+    branches: ["main"]
+    
