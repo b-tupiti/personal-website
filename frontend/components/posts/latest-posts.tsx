@@ -4,6 +4,7 @@ import PostItem from "./post-item";
 import { getLatestPostsGQL } from "@/gql-lib/queries";
 import { gqlFetch } from "@/gql-lib/gql-fetch";
 import Title from "@/ui/title";
+import { Suspense } from "react";
 
 type Post = {
     id: number;
@@ -46,7 +47,7 @@ async function LatestPosts(){
               Latest posts
           </Title> 
 
-          
+          <Suspense fallback={<div>fall back</div>}>
           <div 
               className="flex flex-col items-center mt-8"
               >
@@ -59,7 +60,7 @@ async function LatestPosts(){
               />))
           }
           </div>
-          
+          </Suspense>
 
         </div>
   );
