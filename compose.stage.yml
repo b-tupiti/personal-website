@@ -39,6 +39,8 @@ services:
       set -xe;
       gunicorn --bind 0.0.0.0:8000 cms.wsgi:application
       "
+    env_file:
+      - ./backend/cms/.env
     ports:
       - "8000:8000"
     networks:
