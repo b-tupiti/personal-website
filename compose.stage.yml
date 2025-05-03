@@ -1,0 +1,70 @@
+services:
+
+  nginx:
+    container_name: app-nginx
+    image: nginx:1.25.5
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - backend-static:/staticfiles
+      - backend-media:/mediafiles
+    depends_on:
+      - frontend
+    networks:
+      - app-net
+
+  frontend:
+    container_name: app-frontend
+    build:
+      context: ./frontend
+      network: host
+    depends_on:
+      - backend
+    networks:
+      - app-net
+    volumes:
+      - backend-media:/mediafiles
+    
+
+  backend:
+    container_name: app-backend
+    build:
+      context: ./backend/cms
+    volumes:
+      - backend-static:/staticfiles
+      - backend-media:/mediafiles
+    command: >
+      sh -c "
+      set -xe;
+      gunicorn --bind 0.0.0.0:8000 cms.wsgi:application
+      "
+    env_file:
+      - ./backend/cms/.env
+    ports:
+      - "8000:8000"
+    networks:
+      - app-net
+    depends_on:
+      - db
+
+  db:
+    container_name: app-db
+    image: postgres:16.3
+    env_file:
+      - ./backend/cms/.env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-net
+
+volumes:
+  backend-static:
+  backend-media:
+  db-data:
+
+networks:
+  app-net:
+    name: app-net
+    driver: bridge
+    external: true
