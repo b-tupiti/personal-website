@@ -23,3 +23,6 @@ jobs:
       with:
         role-to-assume: arn:aws:iam::961341552870:role/github-ecr-push-role
         aws-region: eu-west-2
+
+    - name: Log in to AWS ECR
+      run: aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 961341552870.dkr.ecr.eu-west-2.amazonaws.com
